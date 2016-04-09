@@ -1,0 +1,4 @@
+name: Fabio Wallner
+markdown: redcarpet
+highlighter: rouge
+exclude: ["node_modules", "gulpfile.js", "package.json"]

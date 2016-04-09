@@ -53,9 +53,11 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jade-build', function(){
-  return gulp.src('_jadefiles/*.jade')
+  return gulp.src('_jadefiles/_includes/*.jade')
   .pipe(jade())
-  .pipe(gulp.dest('_includes'));
+  .pipe(gulp.dest('_includes')) && gulp.src('_jadefiles/_posts/*.jade')
+  .pipe(jade())
+  .pipe(gulp.dest('_posts'));
 });
 
 /**
@@ -65,7 +67,7 @@ gulp.task('jade-build', function(){
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
-    gulp.watch('_jadefiles/*.jade', ['jade-build']);
+    gulp.watch('_jadefiles/**', ['jade-build']);
 });
 
 /**

@@ -1,0 +1,67 @@
+section.about-me
+  position: relative
+  &:before
+    content: ""
+    transform: skewY(-4deg)
+    position: absolute
+    background: white
+    padding-bottom: 150px
+    margin-top: -80px
+    right: 0px
+    left: 0px
+    top: 0px
+    height: 0px
+    width: 100%
+  &:after
+    content: ""
+    transform: skewY(4deg)
+    position: absolute
+    background: white
+    padding-bottom: 150px
+    margin-bottom: -100px
+    right: 0px
+    left: 0px
+    bottom: 0px
+    height: 0px
+    width: 100%
+
+  .container
+    padding: 10px 0
+    min-height: 500px
+    display: flex
+    justify-content: center
+    align-items: center
+    blockquote
+      p
+        padding: 0
+        margin: 0
+        font:
+          size: 50px
+          weight: 500
+      footer
+        margin-left: 20px
+        color: gray
+        font:
+          size: 30px
+          weight: 300
+        &:before
+          content: "\2014 \00A0"
+          color: gray
+          font:
+            size: 20px
+            weight: 300
+    .about-me-text
+      margin: 20px 40px
+      p.lead
+        font-size: 30px
+      p
+        font-size: 24px
+
+@media (max-width: 960px)
+  section.about-me
+    .container
+      flex-wrap: wrap
+      blockquote
+        margin-top: 85px
+      .about-me-text
+        margin-bottom: 40px

@@ -1,0 +1,21 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About
+    li: a(href="#about") Work
+    li: a(href="#about") Blog
+    li: a(href="#about") Contact
+    li: a.lang-switch(href="#about") Language
+
+
+.mobile-nav
+  +nav-content()
+
+header
+
+  h1.logo Fabio Wallner
+  
+  nav.site-nav
+    
+    +nav-content()
+      
+    .mobile-nav-toggle: span

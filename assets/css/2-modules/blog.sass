@@ -1,0 +1,38 @@
+section.my-blog
+  position: relative
+  background: black
+  &:before
+    content: ""
+    transform: skewY(4deg)
+    position: absolute
+    background: black
+    padding-bottom: 160px
+    margin-top: -92px
+    right: 0px
+    left: 0px
+    top: 0px
+    height: 0px
+    width: 100%
+  &:after
+    content: ""
+    transform: skewY(-4deg)
+    position: absolute
+    background: black
+    padding-bottom: 160px
+    margin-bottom: -92px
+    right: 0px
+    left: 0px
+    bottom: 0px
+    height: 0px
+    width: 100%
+  h2
+    text-align: center
+    color: white
+    font:
+      size: 30px
+      weight: 100
+
+  .container
+    padding: 10px 0
+    min-height: 500px
+    display: flex

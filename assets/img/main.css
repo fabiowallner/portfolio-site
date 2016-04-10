@@ -479,10 +479,8 @@ section.hero {
   width: 100%;
   position: relative;
   background-image: url(/assets/img/bg1_2.jpg);
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: auto; }
+  background-position: top center;
+  background-attachment: fixed; }
   section.hero .tint {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -558,26 +556,21 @@ section.about-me {
         color: gray;
         font-size: 20px;
         font-weight: 300; }
-    section.about-me .container .about-me-text {
-      margin: 20px 40px; }
-      section.about-me .container .about-me-text p.lead {
-        font-size: 30px; }
-      section.about-me .container .about-me-text p {
-        font-size: 24px; }
+    section.about-me .container .about-me-text p.lead {
+      font-size: 30px; }
+    section.about-me .container .about-me-text p {
+      font-size: 24px; }
 
 @media (max-width: 960px) {
-  section.about-me .container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    section.about-me .container blockquote {
-      margin-top: 85px; }
-    section.about-me .container .about-me-text {
-      margin-bottom: 40px; } }
+  section.about-me {
+    padding-bottom: 110px; }
+    section.about-me .container {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
 
 section.my-work {
   width: 100%;
   min-height: 100vh;
-  padding-bottom: 100px;
   background-image: url(/assets/img/bg2.jpg);
   background-attachment: fixed; }
   section.my-work h2 {
@@ -588,10 +581,7 @@ section.my-work {
     font-weight: 100; }
   section.my-work .container .project {
     display: -ms-flexbox;
-    display: flex;
-    padding: 50px 0; }
-    section.my-work .container .project:first-child {
-      padding-top: 0; }
+    display: flex; }
     section.my-work .container .project .description {
       color: white; }
       section.my-work .container .project .description h3 {
@@ -603,73 +593,12 @@ section.my-work {
         display: flex;
         -ms-flex-pack: center;
             justify-content: center;
-        text-align: center;
-        font-size: 11px;
-        font-weight: 300; }
+        text-align: center; }
         section.my-work .container .project .description .tags span {
           display: block;
-          margin: 0 5px;
+          margin: 0 10px;
           padding: 5px;
-          cursor: pointer;
           background: #000000; }
-    section.my-work .container .project .thumbnail {
-      min-width: 500px;
-      max-height: 300px;
-      overflow: hidden; }
-
-@media (max-width: 960px) {
-  section.my-work .container .project {
-    margin: 0 40px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    section.my-work .container .project .thumbnail {
-      margin-top: 30px;
-      min-width: 100%; } }
-
-section.my-blog {
-  position: relative;
-  background: black; }
-  section.my-blog:before {
-    content: "";
-    -webkit-transform: skewY(4deg);
-            transform: skewY(4deg);
-    position: absolute;
-    background: black;
-    padding-bottom: 160px;
-    margin-top: -92px;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    height: 0px;
-    width: 100%; }
-  section.my-blog:after {
-    content: "";
-    -webkit-transform: skewY(-4deg);
-            transform: skewY(-4deg);
-    position: absolute;
-    background: black;
-    padding-bottom: 160px;
-    margin-bottom: -92px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    height: 0px;
-    width: 100%; }
-  section.my-blog h2 {
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    font-weight: 100; }
-  section.my-blog .container {
-    padding: 10px 0;
-    min-height: 500px;
-    display: -ms-flexbox;
-    display: flex; }
-
-section.contact {
-  height: 100vh;
-  background-image: url(/assets/img/bg3.jpg);
-  background-attachment: fixed; }
 
 .portfolio-wrap {
   display: -ms-flexbox;

@@ -1,6 +1,7 @@
 section.my-blog
   position: relative
   background: black
+  z-index: 2
   &:before
     content: ""
     transform: skewY(4deg)
@@ -13,6 +14,7 @@ section.my-blog
     top: 0px
     height: 0px
     width: 100%
+    z-index: -1
   &:after
     content: ""
     transform: skewY(-4deg)
@@ -25,12 +27,14 @@ section.my-blog
     bottom: 0px
     height: 0px
     width: 100%
+    z-index: -1
   h2
     text-align: center
     color: white
     font:
       size: 30px
       weight: 100
+    z-index: 5000
 
   .container
     padding: 10px 0

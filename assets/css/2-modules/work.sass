@@ -1,4 +1,5 @@
 section.my-work
+  z-index: 1
   width: 100%
   min-height: 100vh
   padding-bottom: 100px
@@ -38,11 +39,19 @@ section.my-work
             padding: 5px
             cursor: pointer
             background: #000000
+            +sweep-to-right
       .thumbnail
         min-width: 500px
         max-height: 300px
         overflow: hidden
         img
+    .teaser
+      text-align: center
+      span
+        font-size: 20px
+        color: white
+        background: black
+        padding: 10px
 
 @media (max-width: 960px)
   section.my-work

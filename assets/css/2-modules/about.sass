@@ -1,5 +1,6 @@
 section.about-me
   position: relative
+  z-index: 2
   &:before
     content: ""
     transform: skewY(-4deg)
@@ -12,6 +13,7 @@ section.about-me
     top: 0px
     height: 0px
     width: 100%
+    z-index: -1
   &:after
     content: ""
     transform: skewY(4deg)
@@ -24,7 +26,7 @@ section.about-me
     bottom: 0px
     height: 0px
     width: 100%
-
+    z-index: -1
   .container
     padding: 10px 0
     min-height: 500px

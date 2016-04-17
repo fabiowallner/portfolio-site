@@ -1,5 +1,52 @@
 section.contact
+  padding-top: 100px
   height: 100vh
   background:
     image: url(/assets/img/bg3.jpg)
+    position: top center
+    repeat: no-repeat
     attachment: fixed
+    size: cover
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-flow: column
+
+  h2
+    text-align: center
+    font:
+      size: 40px
+      weight: 100
+    color: white
+
+  form
+    text-align: center
+    width: 750px
+    input,
+    textarea
+      padding: 10px
+      margin: 5px 0px
+      display: block
+      width: calc(100% - 22px)
+
+    button
+      color: white
+      background: black
+      border: 0
+      padding: 10px 20px
+      +sweep-to-right
+
+@media (max-width: 800px)
+  section.contact
+    form
+      width: 500px
+
+@media (max-width: 600px)
+  section.contact
+    form
+      width: 350px
+
+@media (max-width: 450px)
+  section.contact
+    form
+      width: 100%

@@ -7,8 +7,8 @@ section.my-blog
     transform: skewY(4deg)
     position: absolute
     background: black
-    padding-bottom: 160px
-    margin-top: -92px
+    padding-bottom: 170px
+    margin-top: -100px
     right: 0px
     left: 0px
     top: 0px
@@ -32,11 +32,65 @@ section.my-blog
     text-align: center
     color: white
     font:
-      size: 30px
+      size: 40px
       weight: 100
-    z-index: 5000
 
   .container
     padding: 10px 0
     min-height: 500px
+    width: 100%
     display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+
+    .post
+      max-width: 300px
+      background: #fff
+      height: 440px
+      position: relative
+      text-align: right
+      .header
+        text-align: left
+        position: relative
+        img
+          width: 300px
+        h3
+          position: absolute
+          top: 10px
+          span
+            display: inline
+            background: rgba(0, 0, 0, 0.9)
+            padding: 5px 0
+            font:
+              size: 30px
+              weight: 100
+            color: #fff
+            line-height: 47px
+        span.date
+          position: absolute
+          bottom: 10px
+          left: 0
+          background: white
+          font-style: italic
+          text-align: left
+          padding: 0px 5px 0 2px
+      p
+        position: relative
+        text-align: left
+        padding: 10px
+        margin-bottom: 20px
+      a
+        background: black
+        padding: 10px
+        margin-right: 5px
+        +float
+@media (max-width: 930px)
+  section.my-blog
+    .container
+      display: flex
+      flex-wrap: nowrap
+      justify-content: space-around
+      flex-flow: column
+      .post
+        margin-bottom: 30px

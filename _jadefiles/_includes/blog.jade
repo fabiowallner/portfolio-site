@@ -1,4 +1,14 @@
-section.my-blog
+section#my-blog.my-blog
   h2 My Blog.
   
-  .container
+  .container.posts
+    |{% for post in site.posts limit:3%}
+    .post
+      .header
+        img(src="{{ post.image }}")
+        h3
+          span {{ post.title }}
+        span.date {{ post.date | date: '%B %d, %Y' }}
+      p {{ post.excerpt }}
+      a(href="{{ post.url }}") Read more
+    |{% endfor %}

@@ -1,0 +1,51 @@
+footer.site-footer
+  position: relative
+  z-index: 2
+  height: 120px
+  text-align: center
+
+
+
+  .social-media-icons
+    padding: 30px
+    p
+      display: block
+      margin-bottom: 10px
+    a
+      display: block-inline
+      color: black
+      font:
+        size: 30px
+      margin: 0px 20px
+      padding: 5px
+      transition: all 0.2s ease-in-out
+      &:hover
+        background-color: black
+        color: white
+
+  p.copy
+    padding-bottom: 10px
+    span
+      display: block-inline
+      &:after
+        display: block-inline
+        margin: 0px 20px
+        content: "|"
+    span:last-child
+      &:after
+        content: none
+
+@media (max-width: 800px)
+  footer.site-footer
+    .social-media-icons
+      a
+        display: block
+
+@media (max-width: 500px)
+  footer.site-footer
+    p.copy
+      span
+        display: block
+        margin-bottom: 10px
+        &:after
+          display: none

@@ -53,11 +53,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jade-build', function(){
-  return gulp.src('_jadefiles/_includes/*.jade')
-  .pipe(jade())
-  .pipe(gulp.dest('_includes')) && gulp.src('_jadefiles/_posts/*.jade')
-  .pipe(jade())
-  .pipe(gulp.dest('_posts'));
+  gulp.src('_jadefiles/_includes/*.jade').pipe(jade()).pipe(gulp.dest('_includes'));
+  gulp.src('_jadefiles/_posts/*.jade').pipe(jade()).pipe(gulp.dest('_posts'));
 });
 
 /**

@@ -1,1 +1,1 @@
-<section class="my-blog"><h2>My Blog.</h2><div class="container"></div></section>
+<section id="my-blog" class="my-blog"><h2>My Blog.</h2><div class="container posts">{% for post in site.posts limit:3%}<div class="post"><div class="header"><img src="{{ post.image }}"/><h3><span>{{ post.title }}</span></h3><span class="date">{{ post.date | date: '%B %d, %Y' }}</span></div><p>{{ post.excerpt }}</p><a href="{{ post.url }}">Read more</a></div>{% endfor %}</div></section>

@@ -4264,7 +4264,8 @@ section .container {
   -ms-flex-align: center;
       align-items: center;
   width: 100%;
-  z-index: 2; }
+  z-index: 2;
+  top: 20px; }
   .portfolio-wrap header .logo {
     overflow: hidden;
     text-indent: 101%;
@@ -4276,14 +4277,14 @@ section .container {
     height: 80px;
     width: 80px;
     padding: 0;
-    margin: 30px 30px; }
+    margin: 30px 0px 30px 60px; }
   .portfolio-wrap header .site-nav {
     height: 100px;
     z-index: 3; }
     .portfolio-wrap header .site-nav ul {
       list-style: none;
       padding: 0;
-      margin: 30px 30px;
+      margin: 30px 0px 30px 60px;
       font-size: 20px; }
       .portfolio-wrap header .site-nav ul li {
         display: block;
@@ -4296,7 +4297,7 @@ section .container {
     .portfolio-wrap header .site-nav .mobile-nav-toggle {
       width: 50px;
       height: 50px;
-      margin: 30px 30px;
+      margin: 30px 60px;
       display: none;
       -ms-flex-align: center;
           align-items: center; }
@@ -4360,11 +4361,11 @@ section.hero {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-image: url(/assets/img/bg1_2.jpg);
+  background-image: url(/assets/img/bg1.jpg);
   background-position: top right;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 1920px 1080px; }
+  background-size: cover; }
   section.hero .tint {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -4382,7 +4383,9 @@ section.hero {
     section.hero .tint h1 {
       font-size: 80px;
       font-weight: 100;
-      color: white; }
+      color: white;
+      background-color: #000;
+      padding: 10px; }
 
 .scroll-down-info {
   position: absolute;
@@ -4390,7 +4393,7 @@ section.hero {
   font-size: 50px;
   width: 100%;
   text-align: center;
-  z-index: 3;
+  z-index: 4;
   -webkit-animation-name: point-down;
           animation-name: point-down;
   -webkit-animation-fill-mode: both;
@@ -4425,6 +4428,10 @@ section.hero {
 @media (max-width: 775px) {
   section.hero {
     height: 90vh; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  section.hero {
+    background-attachment: scroll; } }
 
 section.about-me {
   position: relative;
@@ -4487,9 +4494,12 @@ section.about-me {
     section.about-me .container .about-me-text {
       margin: 20px 40px; }
       section.about-me .container .about-me-text p.lead {
-        font-size: 30px; }
+        font-weight: 300;
+        font-size: 30px;
+        margin-bottom: 20px; }
       section.about-me .container .about-me-text p {
-        font-size: 24px; }
+        font-size: 22px;
+        margin-bottom: 10px; }
 
 @media (max-width: 960px) {
   section.about-me .container {
@@ -4526,11 +4536,16 @@ section.my-work {
       section.my-work .container .project:first-child {
         padding-top: 0; }
       section.my-work .container .project .description {
-        color: white; }
+        color: white;
+        margin-right: 50px;
+        position: relative;
+        max-width: 400px;
+        text-align: center; }
         section.my-work .container .project .description h3 {
-          text-align: center;
+          display: inline-block;
           font-size: 30px;
-          font-weight: 100; }
+          font-weight: 100;
+          border-bottom: 1px solid white; }
         section.my-work .container .project .description p {
           margin-bottom: 10px; }
         section.my-work .container .project .description .tags {
@@ -4583,8 +4598,16 @@ section.my-work {
       section.my-work .container .project .thumbnail {
         text-align: center;
         min-width: 500px;
+        min-height: 300px;
         max-height: 300px;
-        overflow: hidden; }
+        overflow: hidden;
+        position: relative;
+        cursor: crosshair; }
+        section.my-work .container .project .thumbnail img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all 1s ease-in-out; }
     section.my-work .container .teaser {
       text-align: center; }
       section.my-work .container .teaser span {
@@ -4608,6 +4631,10 @@ section.my-work {
         flex-wrap: wrap; }
     section.my-work .container .project .description .tags span {
       margin-bottom: 5px; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  section.my-work {
+    background-attachment: scroll; } }
 
 section.my-blog {
   position: relative;
@@ -4794,6 +4821,12 @@ section.contact {
         section.contact form button:hover:before, section.contact form button:focus:before, section.contact form button:active:before {
           -webkit-transform: scaleX(1);
           transform: scaleX(1); }
+  section.contact div.form-submitted {
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    display: none; }
 
 @media (max-width: 800px) {
   section.contact form {
@@ -4806,6 +4839,10 @@ section.contact {
 @media (max-width: 450px) {
   section.contact form {
     width: 100%; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  section.contact {
+    background-attachment: scroll; } }
 
 footer.site-footer {
   position: relative;

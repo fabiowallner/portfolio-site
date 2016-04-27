@@ -26,11 +26,16 @@ section.my-work
         padding-top: 0
       .description
         color: white
+        margin-right: 50px
+        position: relative
+        max-width: 400px
+        text-align: center
         h3
-          text-align: center
+          display: inline-block
           font:
             size: 30px
             weight: 100
+          border-bottom: 1px solid white
         p
           margin-bottom: 10px
         .tags
@@ -50,9 +55,16 @@ section.my-work
       .thumbnail
         text-align: center
         min-width: 500px
+        min-height: 300px
         max-height: 300px
         overflow: hidden
+        position: relative
+        cursor: crosshair
         img
+          position: absolute
+          top: 0
+          left: 0
+          transition: all 1s ease-in-out
     .teaser
       text-align: center
       span
@@ -80,3 +92,7 @@ section.my-work
             flex-wrap: wrap
             span
               margin-bottom: 5px
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px)
+  section.my-work
+    background-attachment: scroll

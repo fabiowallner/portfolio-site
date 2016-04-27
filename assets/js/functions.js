@@ -1,20 +1,13 @@
+$(window).load(function() {
+		$(".se-pre-con").fadeOut("slow");;
+	});
+
 $(function() {
-  startValues();
   mobileNav();
   smoothScroll(500);
   scrollPictures();
   contactFormSubmit();
 })
-
-/*
-function mobileNav() {
-  $('.mobile-nav-toggle').on('click', function(){
-    var status = $(this).hasClass('is-open');
-    if(status){ $('.mobile-nav-toggle, .mobile-nav').removeClass('is-open'); }
-    else { $('.mobile-nav-toggle, .mobile-nav').addClass('is-open'); }
-  });
-}
-*/
 
 function contactFormSubmit() {
   $('#contact-form').submit(function(e) {
@@ -32,7 +25,7 @@ function contactFormSubmit() {
            }
          });
 
-    e.preventDefault(); // avoid to execute the actual submit of the form.
+    e.preventDefault();
   });
 }
 
@@ -58,7 +51,7 @@ function mobileNav() {
 }
 
 function smoothScroll (duration) {
-	$('a[href^="#"]').on('click', function(event) {
+	$('a[href^="/#"]').on('click', function(event) {
     $('.mobile-nav-toggle, .mobile-nav').toggleClass('is-open');
 	    var target = $( $(this).attr('href') );
 
@@ -70,31 +63,3 @@ function smoothScroll (duration) {
 	    }
 	});
 }
-
-function startValues() {
-
-}
-
-/*
-if (navigator.userAgent.match(/(\(iPod|\(iPhone|\(iPad)/)) {
-  $('section.hero').css('background-position', 'scroll');
-  $('section.my-work').css('background-position', 'scroll');
-  $('section.contact').css('background-position', 'scroll');
-
-  $(window).scroll(function() {
-    var scrolledY = $(window).scrollTop();
-    if(scrolledY > $('section.my-work').offset().top) {
-      console.log('past');
-    }
-
-    if(scrolledY < $('section.hero').height()) {
-        $('section.hero').css('background-position', 'center ' + ((scrolledY)) + 'px');
-    }
-    $('section.my-work').css('background-position', 'center ' + ((scrolledY - $('section.my-work').offset().top)) + 'px');
-
-    $('section.contact').css('background-position', 'center ' + ((scrolledY - $('section.contact').offset().top)) + 'px');
-
-
-  });
-}
-*/

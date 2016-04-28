@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+---
+<div class="blog-wrap">
+
+  {% include header-blog.html %}
+
+  <section class="header">
+    <h1>Blog</h1>
+    <p>Thoughts and updates about life, business and tech stuff.</p>
+  </section>
+
+  <section class="posts">
+    {% for post in site.posts %}
+      <a href="{{ post.url }}">
+        <article>
+          <img src="{{ post.image }}"/>
+          <h2><span>{{ post.title }}</span></h2>
+          <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+          <p>{{ post.excerpt }}</p>
+        </article>
+      </a>
+    {% endfor %}
+  </section>
+
+  <hr>
+  {% include footer.html %}
+</div>

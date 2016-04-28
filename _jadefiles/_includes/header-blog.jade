@@ -1,0 +1,21 @@
+mixin nav-content()
+  ul
+    li: a(href="/blog") Blog
+    li: a(href="/") Portfolio
+    li: a(href="/#contact") Contact
+    li: a.lang-switch(href="") Deutsch <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+
+
+.mobile-nav
+  +nav-content()
+
+header.menu
+
+  h1.logo Fabio Wallner
+  
+  nav.site-nav
+    
+    +nav-content()
+      
+    .mobile-nav-toggle: span

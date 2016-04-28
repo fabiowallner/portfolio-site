@@ -1,5 +1,9 @@
-name: Fabio Wallner
+name: fabiowallner.com
 markdown: redcarpet
 highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 excerpt_seperator: <!--more-->
+permalink: /blog/:year/:month/:day/:title.html
+url: http://fabiowallner.com
+title: Fabio Wallner
+author: Fabio Wallner

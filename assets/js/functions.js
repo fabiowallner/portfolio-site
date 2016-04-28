@@ -51,7 +51,7 @@ function mobileNav() {
 }
 
 function smoothScroll (duration) {
-	$('a[href^="/#"]').on('click', function(event) {
+	$('a[href^="#"]').on('click', function(event) {
     $('.mobile-nav-toggle, .mobile-nav').toggleClass('is-open');
 	    var target = $( $(this).attr('href') );
 

@@ -5,6 +5,7 @@
 @import "1-base/vars";
 @import "1-base/base";
 
+//Portfolio Styles
 @import "2-modules/header";
 @import "2-modules/hero";
 @import "2-modules/about";
@@ -15,4 +16,9 @@
 
 @import "2-modules/imprint";
 
+//Blog Styles
+@import "2-modules/header-blog";
+@import "2-modules/post";
+
 @import "3-layouts/portfolio";
+@import "3-layouts/blog";

@@ -1,9 +1,59 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<div class="blog-wrap">
+  {% include header-blog.html %}
 
-<div class="post">
-{{ content }}
+  <article class="post">
+    <header>
+      <img src="{{ page.image }}"/>
+      <h2>{{ page.title }}</h2>
+    </header>
+    <div class="content">
+      <p class="meta">By {{ page.author}} on {{ page.date | date: '%B %d, %Y %H:%M' }}</p>
+      <div class="social-media-button">
+        <div class="fb-like" data-href="{{ site.url | append: page.url }}" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+      </div>
+      <div class="social-media-button">
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?via=_fabiow">Tweet</a>
+      </div>
+      {{ content }}
+    </div>
+    <footer>
+      {% if page.next != nil %}
+        <a class="next-post" href="{{ page.next.url }}">Next Post</a>
+      {% endif %}
+      {% if page.previous != nil %}
+        <a class="previous-post" href="{{ page.previous.url }}">Previous Post</a>
+      {% endif %}
+    </footer>
+  </article>
+
+  <section class="comments">
+    <div id="disqus_thread"></div>
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      var disqus_config = function () {
+          this.page.url = "{{ site.url | append: page.url }}";
+          this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//fabiowallner.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </section>
+
+  <hr>
+
+  {% include footer.html %}
 </div>

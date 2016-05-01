@@ -22,11 +22,11 @@ section.my-work
     .project
       display: flex
       padding: 50px 0
+      justify-content: space-around
       &:first-child
         padding-top: 0
       .description
         color: white
-        margin-right: 50px
         position: relative
         max-width: 400px
         text-align: center
@@ -54,16 +54,15 @@ section.my-work
             +sweep-to-right
       .thumbnail
         text-align: center
-        min-width: 500px
-        min-height: 300px
-        max-height: 300px
         overflow: hidden
         position: relative
         cursor: crosshair
+        width: 500px
         img
           position: absolute
           top: 0
           left: 0
+          width: 100%
           transition: all 3s ease-in-out
     .teaser
       text-align: center
@@ -77,11 +76,13 @@ section.my-work
   section.my-work
     .container
       .project
-        margin: 0 40px
-        flex-wrap: wrap
+        flex-direction: column
+        justify-content: center
+        align-items: center
         .thumbnail
-          margin-top: 30px
-          min-width: 100%
+          width: 400px
+          margin-top: 20px
+          height: 200px
 
 @media (max-width: 400px)
   section.my-work
@@ -92,6 +93,8 @@ section.my-work
             flex-wrap: wrap
             span
               margin-bottom: 5px
+        .thumbnail
+          width: 100%
 
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
   section.my-work

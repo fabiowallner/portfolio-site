@@ -4397,7 +4397,7 @@ section.hero {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center; }
-    section.hero .tint h1 {
+    section.hero .tint h2 {
       font-size: 80px;
       font-weight: 100;
       color: white;
@@ -4879,7 +4879,7 @@ footer.site-footer {
       display: block;
       margin-bottom: 10px; }
     footer.site-footer .social-media-icons a {
-      display: block-inline;
+      display: inline-block;
       color: black;
       font-size: 30px;
       margin: 0px 20px;
@@ -4891,7 +4891,7 @@ footer.site-footer {
   footer.site-footer p.copy {
     padding-bottom: 10px; }
     footer.site-footer p.copy span {
-      display: block-inline; }
+      display: inline-block; }
       footer.site-footer p.copy span a {
         color: black;
         transition: all 0.2s ease-in-out; }

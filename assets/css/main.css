@@ -4482,6 +4482,11 @@ section.about-me {
     height: 0px;
     width: 100%;
     z-index: -1; }
+  section.about-me h2 {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: 100; }
   section.about-me .container {
     padding: 10px 0;
     min-height: 500px;
@@ -4526,6 +4531,10 @@ section.about-me {
       margin-top: 85px; }
     section.about-me .container .about-me-text {
       margin-bottom: 40px; } }
+
+@media (max-width: 775px) {
+  section.about-me h2 {
+    margin-top: 55px; } }
 
 section.my-work {
   position: relative;
